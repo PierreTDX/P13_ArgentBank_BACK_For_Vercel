@@ -1,4 +1,4 @@
-# Project #10 - Argent Bank API
+# Project #13 - Argent Bank API
 
 This codebase contains the code needed to run the backend for Argent Bank.
 
@@ -10,6 +10,7 @@ Argent Bank uses the following tech stack:
 
 - [Node.js v12](https://nodejs.org/en/)
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- [MongoDB Shell (mongosh)](https://www.mongodb.com/try/download/shell)
 
 Please make sure you have the right versions and download both packages. You can verify this by using the following commands in your terminal:
 
@@ -17,8 +18,8 @@ Please make sure you have the right versions and download both packages. You can
 # Check Node.js version
 node --version
 
-# Check Mongo version
-mongo --version
+# Check Mongosh version
+mongosh --version
 ```
 
 ### Instructions
@@ -35,7 +36,7 @@ npm install
 # Start local dev server
 npm run dev:server
 
-# Populate database with two users
+# Populate database with two users (in over terminal window, when local dev server started)
 npm run populate-db
 ```
 

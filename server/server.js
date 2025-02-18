@@ -3,7 +3,8 @@ const dotEnv = require('dotenv')
 const cors = require('cors')
 const swaggerUi = require('swagger-ui-express')
 const yaml = require('yamljs')
-const swaggerDocs = yaml.load('./swagger.yaml')
+const path = require('path');
+const swaggerDocs = yaml.load(path.join(__dirname, '../swagger.yaml'));
 const dbConnection = require('./database/connection')
 
 dotEnv.config()
@@ -30,7 +31,9 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 app.get('/', (req, res, next) => {
-  res.send('Hello from my Express server v2!')
+  res.send(
+    'Hello from my Express server v2!<br> <a href="http://localhost:3001/api-docs">API Docs : http://localhost:3001/api-docs</a>'
+  )
 })
 
 app.listen(PORT, () => {
