@@ -16,7 +16,15 @@ const PORT = process.env.PORT || 3001
 dbConnection()
 
 // Handle CORS issues
-app.use(cors({ origin: "*" }));
+const corsOptions = {
+  origin: [
+    "http://localhost:5173",  // Front-end en local
+    "https://p13-argentbank-oc.vercel.app"  // Front-end en ligne
+  ],
+  methods: "GET, POST, PUT, DELETE",
+  allowedHeaders: "Content-Type, Authorization"
+};
+app.use(cors(corsOptions));
 
 // Request payload middleware
 app.use(express.json())
