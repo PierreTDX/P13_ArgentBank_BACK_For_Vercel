@@ -53,7 +53,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.get('/', (req, res, next) => {
   res.send(
-    'Hello from my Express server v2!<br> <a href="http://localhost:3001/api-docs">API Docs : http://localhost:3001/api-docs</a>'
+    'Hello from my Express server v2!<br> <a href="https://p13-argentbank-oc.vercel.app/">Go to the Front on line to test it : https://p13-argentbank-oc.vercel.app/</a>'
   )
 })
 
