@@ -5,7 +5,7 @@ const swaggerUi = require('swagger-ui-express')
 const yaml = require('yamljs')
 const path = require('path');
 const swaggerDocs = yaml.load(path.join(__dirname, '../swagger.yaml'));
-const dbConnection = require('./../api/connection')
+const dbConnection = require('./database/connection')
 
 dotEnv.config()
 
@@ -36,6 +36,7 @@ app.get('/', (req, res, next) => {
   )
 })
 
-app.listen(PORT, () => {
-  console.log(`Server listening on http://localhost:${PORT}`)
-})
+// app.listen(PORT, () => {
+//   console.log(`Server listening on http://localhost:${PORT}`)
+// })
+module.exports = app;
