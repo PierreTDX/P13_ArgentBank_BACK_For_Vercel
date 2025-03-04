@@ -16,7 +16,13 @@ const PORT = process.env.PORT || 3001
 dbConnection()
 
 // Handle CORS issues
-app.use(cors())
+const corsOptions = {
+  origin: "http://localhost:5173", // Autorise uniquement ton front-end en local
+  methods: "GET,POST,PUT,DELETE",
+  allowedHeaders: "Content-Type,Authorization"
+};
+
+app.use(cors(corsOptions));
 
 // Request payload middleware
 app.use(express.json())
