@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "/api/api-endpoint.js",
+      "src": "server/server.js",
       "use": "@vercel/node"
     }
   ],
